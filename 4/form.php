@@ -95,21 +95,28 @@
                                                                                                 print 'class="error"';
                                                                                             } ?>>
                     <option value="inf" <?php $arr = $values['select'];
-                                        foreach ($arr as $value) {
-                                            if ($value == 'inf') {
-                                                print 'selected';
-                                            }
-                                        } ?>>Бессмертие</option>
-                    <option value="through" <?php $arr = $values['select'];
+                                        if ($arr != '') {
                                             foreach ($arr as $value) {
-                                                if ($value == 'through') {
+                                                if ($value == 'inf') {
                                                     print 'selected';
+                                                }
+                                            }
+                                        }
+                                        ?>>Бессмертие</option>
+                    <option value="through" <?php $arr = $values['select'];
+                                            if ($arr != '') {
+                                                foreach ($arr as $value) {
+                                                    if ($value == 'through') {
+                                                        print 'selected';
+                                                    }
                                                 }
                                             } ?>>Прохождение сквозь стены</option>
                     <option value="levitation" <?php $arr = $values['select'];
-                                                foreach ($arr as $value) {
-                                                    if ($value == 'levitation') {
-                                                        print 'selected';
+                                                if ($arr != '') {
+                                                    foreach ($arr as $value) {
+                                                        if ($value == 'levitation') {
+                                                            print 'selected';
+                                                        }
                                                     }
                                                 } ?>>Левитация</option>
                 </select>
