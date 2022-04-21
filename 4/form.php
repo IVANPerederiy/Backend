@@ -94,18 +94,20 @@
                 <select class="form-select form-select-lg mb-2" name="select[]" multiple <?php if ($errors['select']) {
                                                                                                 print 'class="error"';
                                                                                             } ?>>
-                    <option value="inf" <?php foreach ($values['select'] as $value) {
+                    <option value="inf" <?php $arr = $values['select'];
+                                        foreach ($arr as $value) {
                                             if ($value == 'inf') {
                                                 print 'selected';
                                             }
                                         } ?>>Бессмертие</option>
-                    <option value="through" <?php foreach ($values['select'] as $value) {
+                    <option value="through" <?php $arr = $values['select'];
+                                            foreach ($arr as $value) {
                                                 if ($value == 'through') {
                                                     print 'selected';
                                                 }
                                             } ?>>Прохождение сквозь стены</option>
-                    <option value="levitation" <?php
-                                                foreach ($values['select'] as $value) {
+                    <option value="levitation" <?php $arr = $values['select'];
+                                                foreach ($arr as $value) {
                                                     if ($value == 'levitation') {
                                                         print 'selected';
                                                     }
