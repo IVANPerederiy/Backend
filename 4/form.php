@@ -43,9 +43,9 @@
             </div>
             <div class="birth-block">
                 <span class="input-group-text block-title" id="basic-addon3">Дата рождения</span>
-                <input type="date" class="form-control" aria-describedby="basic-addon3" placeholder="example@mail.ru" name="date" <?php if ($errors['date']) {
+                <input type="date" class="form-control" aria-describedby="basic-addon3" placeholder="example@mail.ru" name="birth" <?php if ($errors['birth']) {
                                                                                                                                         print 'class="error"';
-                                                                                                                                    } ?> value="<?php print $values['date']; ?>" />
+                                                                                                                                    } ?> value="<?php print $values['birth']; ?>" />
             </div>
             <div id="gender-block">
                 <span class="input-group-text block-title">Пол</span>
