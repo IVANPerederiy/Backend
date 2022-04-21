@@ -51,11 +51,15 @@
                 <span class="input-group-text block-title">Пол</span>
                 <div class="radios">
                     <div class="male-radio">
-                        <input class="form-check-input" type="radio" name="gender" value="m" />
+                        <input class="form-check-input" type="radio" name="gender" value="m" <?php if ($values['gender'] == 'm') {
+                                                                                                    print 'checked';
+                                                                                                }; ?> />
                         <label class="form-check-label" for="male">Мужской</label>
                     </div>
                     <div class="female-radio">
-                        <input class="form-check-input" type="radio" name="gender" value="f" />
+                        <input class="form-check-input" type="radio" name="gender" value="f" <?php if ($values['gender'] == 'f') {
+                                                                                                    print 'checked';
+                                                                                                }; ?> />
                         <label class="form-check-label" for="female">Женский</label>
                     </div>
                 </div>
@@ -94,7 +98,7 @@
                 <select class="form-select form-select-lg mb-2" name="select[]" multiple <?php if ($errors['select']) {
                                                                                                 print 'class="error"';
                                                                                             } ?>>
-                    <option value="inf" <?php $arr = $values['select'];
+                    <option value="inf" <?php $arr = explode(',', $values['select']);
                                         if ($arr != '') {
                                             foreach ($arr as $value) {
                                                 if ($value == 'inf') {
@@ -103,7 +107,7 @@
                                             }
                                         }
                                         ?>>Бессмертие</option>
-                    <option value="through" <?php $arr = $values['select'];
+                    <option value="through" <?php $arr = explode(',', $values['select']);
                                             if ($arr != '') {
                                                 foreach ($arr as $value) {
                                                     if ($value == 'through') {
@@ -111,7 +115,7 @@
                                                     }
                                                 }
                                             } ?>>Прохождение сквозь стены</option>
-                    <option value="levitation" <?php $arr = $values['select'];
+                    <option value="levitation" <?php $arr = explode(',', $values['select']);
                                                 if ($arr != '') {
                                                     foreach ($arr as $value) {
                                                         if ($value == 'levitation') {
