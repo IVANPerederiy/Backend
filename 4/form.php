@@ -94,21 +94,21 @@
                 <select class="form-select form-select-lg mb-2" name="select[]" multiple <?php if ($errors['select']) {
                                                                                                 print 'class="error"';
                                                                                             } ?>>
-                    <option value="inf" <?php $a = explode(',', $values['select']);
-                                        foreach ($a as $key) {
-                                            if ($key == 'inf') {
+                    <option value="inf" <?php $arr = explode(',', $values['select']);
+                                        foreach ($arr as $value) {
+                                            if ($value == 'inf') {
                                                 print 'selected';
                                             }
                                         } ?>>Бессмертие</option>
-                    <option value="through" <?php $a = explode(',', $values['select']);
-                                            foreach ($a as $key) {
-                                                if ($key == 'through') {
+                    <option value="through" <?php $arr = explode(',', $values['select']);
+                                            foreach ($arr as $value) {
+                                                if ($value == 'through') {
                                                     print 'selected';
                                                 }
                                             } ?>>Прохождение сквозь стены</option>
-                    <option value="levitation" <?php $a = explode(',', $values['select']);
-                                                foreach ($a as $key) {
-                                                    if ($key == 'levitation') {
+                    <option value="levitation" <?php $arr = explode(',', $values['select']);
+                                                foreach ($arr as $value) {
+                                                    if ($value == 'levitation') {
                                                         print 'selected';
                                                     }
                                                 } ?>>Левитация</option>
