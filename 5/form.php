@@ -29,7 +29,7 @@
 
     <div class="form-container">
         <div>
-        <a href="login.php?logout=1" <?php (!empty($_SESSION['login'])) ? "print(display:inline-block)" : "print(display:none)"; ?>>выйти</a>
+        <a href="login.php?logout=1" <?php (!empty($_SESSION['login']) || $_SESSION['login'] == '') ? "print(display:none)" : "print(display:inline-block)"; ?>>выйти</a>
       </div>
         <form method="POST" action="">
             <div class="name-block">
@@ -131,7 +131,7 @@
             <div class="input-group">
                 <textarea class="form-control" placeholder="Расскажите о себе..." name="bio" <?php if ($errors['bio']) {
                                                                                                     print 'class="error"';
-                                                                                                } ?> value="<?php print $values['bio']; ?>"></textarea>
+                                                                                                } ?> ><?php print $values['bio']; ?></textarea>
             </div>
             <div class="form-check" id="policy">
                 <input class="form-check-input" type="checkbox" value="y" id="policy" name="policy" checked />
