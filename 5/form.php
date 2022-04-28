@@ -29,7 +29,7 @@
 
     <div class="form-container">
         <div>
-        <a href="login.php?logout=1" <?php (empty($_SESSION['login'])) ? 'style="print(display:none)"' : 'style="print(display:inline-block)"'; ?>>выйти</a>
+        <a href="login.php?logout=1" <?php (empty($_SESSION['login'])) ? print('style="display:none"') : print('style="display:inline-block"'); ?>>выйти</a>
       </div>
         <form method="POST" action="">
             <div class="name-block">
