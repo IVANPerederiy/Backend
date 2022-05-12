@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container {
+    padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 3px;
+}
+
+.block {
+    margin-bottom: 7px;
+}
+
+.radios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.policy .form-check-label a {
+    color: #7ca2b7;
+}
+
+#send-btn {
+    width: 100%;
+    background-color: #ae52f8 !important;
+    border-color: #ae52f8 !important;
+}
+
+.records-list {
+    padding: 30px 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 2px solid #E3E6EC;
+    border-collapse: collapse;
+}
+
+td, th {
+    font-size: 13px;
+    padding: 0px 8px;
+}
+
+table th {
+    font-size: 15px;
+    color: #fff;
+    background: #ae52f8;
+    height: 30px;
+}
+
+#bio {
+    width: 300px;
+}
+
+.edit-buttons {
+    width: 60px;
+    border: none;
+}
+
+.edit-buttons div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.edit-buttons form button {
+    margin-right: 5px;
+    padding: 5px;
+
+    border-radius: 7px;
+
+    transition: 250ms;
+}
+
+.edit-buttons form button img {
+    width: 36px;
+}
+
+#edit, #delete {
+    background-color: transparent;
+    border: none;
+}
+
+.edit-buttons form button img:hover {
+    filter: blur(1px);
+}
