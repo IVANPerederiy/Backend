@@ -143,8 +143,8 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
     <div class="records-list">
         <table>
             <tr>
-                <th>Название способности</th>
-                <th>Количество обладателей</th>
+                <th>Способность</th>
+                <th>Пользователи</th>
             </tr>
             <?php
             if (!empty($powersCount)) {
@@ -163,9 +163,9 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
                 <th>Имя</th>
                 <th>Email</th>
                 <th>Дата рождения</th>
-                <th>Пол</th>
                 <th>Конечности</th>
-                <th>Команда</th>
+                <th>Пол</th>
+                <th>Способности</th>
                 <th>Биография</th>
             </tr>
             <?php
