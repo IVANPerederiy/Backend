@@ -196,11 +196,11 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
                         <td class="edit-buttons">
                             <div>
                                 <form action="" method="post">
-                                    <input value="edit" name="edit" type="hidden" />
+                                    <input value="<?php echo $value['id'] ?>" name="edit" type="hidden" />
                                     <button id="edit"><img src="./img/icons8-edit.svg" /></button>
                                 </form>
                                 <form action="" method="post">
-                                    <input value="delete" name="delete" type="hidden" />
+                                    <input value="<?php echo $value['login'] ?>" name="delete" type="hidden" />
                                     <button id="delete"><img src="./img/icons8-remove-64.png" /></button>
                                 </form>
                             </div>
